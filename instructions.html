@@ -1,91 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instruções de Uso - OBS Controller</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #f7f8fa;
-            color: #333;
-        }
-        h1, h2 {
-            color: #222;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            margin: auto;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instruções de Uso - OBS Controller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: #f7f8fa;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+    }
+    .lang-selector button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0 5px;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin: 40px auto;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 14px;
+      color: #777;
+    }
+    [lang] {
+      display: none;
+    }
+    [lang].active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Instruções de Uso – OBS Controller</h1>
-        <p><strong>Última atualização:</strong> 3 de novembro de 2025</p>
+  <header>
+    <div class="lang-selector">
+      <button onclick="switchLang('pt')">🇧🇷</button>
+      <button onclick="switchLang('en')">🇺🇸</button>
+      <button onclick="switchLang('es')">🇪🇸</button>
+      <button onclick="switchLang('fr')">🇫🇷</button>
+      <button onclick="switchLang('de')">🇩🇪</button>
+      <button onclick="switchLang('ru')">🇷🇺</button>
+      <button onclick="switchLang('zh')">🇨🇳</button>
+      <button onclick="switchLang('ja')">🇯🇵</button>
+      <button onclick="switchLang('hi')">🇮🇳</button>
+      <button onclick="switchLang('ar')">🇸🇦</button>
+    </div>
+  </header>
 
-        <h2>🇧🇷 Como usar o OBS Controller</h2>
-        <ol>
-            <li>Abra o <strong>OBS Studio</strong> no seu computador (versão 5.0 ou superior).</li>
-            <li>Certifique-se de que o <strong>OBS WebSocket</strong> está ativado nas configurações do OBS:
-                <ul>
-                    <li>Acesse <em>Configurações → WebSocket Server → Habilitar Servidor WebSocket</em>.</li>
-                    <li>Anote o <strong>endereço IP</strong> do computador.</li>
-                </ul>
-            </li>
-            <li>No aplicativo <strong>OBS Controller</strong>, insira apenas o <strong>IP do seu computador</strong>.</li>
-            <li>A <strong>porta 4455</strong> é usada automaticamente pelo app, pois é a porta padrão oficial do OBS WebSocket 5.0+.</li>
-            <li>Se o servidor tiver senha, insira a senha configurada no OBS.</li>
-            <li>Após conectar, o app exibirá suas <strong>cenas</strong> do OBS em formato de cartões.</li>
-            <li>Toque em uma cena para alternar, ou <strong>arraste</strong> para reordenar a lista.</li>
-            <li>A miniatura de pré-visualização mostrará a cena selecionada.</li>
-        </ol>
-        <p>💡 <strong>Dica:</strong> O telefone e o computador precisam estar na <strong>mesma rede Wi-Fi</strong>.</p>
-
-        <hr>
-
-        <h2>🇺🇸 How to use OBS Controller</h2>
-        <ol>
-            <li>Open <strong>OBS Studio</strong> on your computer (version 5.0 or newer).</li>
-            <li>Make sure <strong>OBS WebSocket</strong> is enabled under <em>Settings → WebSocket Server</em>:
-                <ul>
-                    <li>Note your computer’s <strong>IP address</strong>.</li>
-                </ul>
-            </li>
-            <li>In the <strong>OBS Controller</strong> app, enter only your computer’s <strong>IP address</strong>.</li>
-            <li>The app automatically uses port <strong>4455</strong>, which is the official default port for OBS WebSocket 5.0+.</li>
-            <li>If your OBS server has a password, enter it when prompted.</li>
-            <li>Once connected, your <strong>OBS scenes</strong> will appear as cards.</li>
-            <li>Tap a scene to switch, or <strong>drag</strong> to reorder scenes.</li>
-            <li>The preview thumbnail will display the selected scene.</li>
-        </ol>
-        <p>💡 <strong>Tip:</strong> Your phone and computer must be on the <strong>same Wi-Fi network</strong>.</p>
+  <div class="container">
+    <!-- 🇧🇷 Português -->
+    <div lang="pt" class="active">
+      <h1>Instruções de Uso – OBS Controller</h1>
+      <p><strong>Última atualização:</strong> 3 de novembro de 2025</p>
+      <ol>
+        <li>Abra o <strong>OBS Studio</strong> no seu computador (versão 5.0 ou superior).</li>
+        <li>Ative o <strong>OBS WebSocket</strong> nas configurações do OBS:
+          <ul>
+            <li>Vá em <em>Configurações → Servidor WebSocket → Habilitar Servidor WebSocket</em>.</li>
+            <li>O aplicativo usa automaticamente a porta <strong>4455</strong>, que é a padrão do OBS.</li>
+          </ul>
+        </li>
+        <li>No aplicativo <strong>OBS Controller</strong>, insira apenas o <strong>endereço IP</strong> do seu computador.</li>
+        <li>Se o servidor tiver senha, insira a senha configurada no OBS.</li>
+        <li>Após conectar, o app exibirá suas <strong>cenas</strong> do OBS em cartões interativos.</li>
+        <li>Toque em uma cena para alternar, ou <strong>arraste</strong> para reordenar.</li>
+      </ol>
+      <p>💡 <strong>Dica:</strong> O telefone e o computador precisam estar na <strong>mesma rede Wi-Fi</strong>.</p>
     </div>
 
-    <footer>
-        &copy; 2025 Thyago Neves. Todos os direitos reservados.
-    </footer>
+    <!-- 🇺🇸 English -->
+    <div lang="en">
+      <h1>How to Use – OBS Controller</h1>
+      <p><strong>Last updated:</strong> November 3, 2025</p>
+      <ol>
+        <li>Open <strong>OBS Studio</strong> on your computer (version 5.0 or newer).</li>
+        <li>Enable the <strong>OBS WebSocket</strong> under <em>Settings → WebSocket Server → Enable WebSocket Server</em>.</li>
+        <li>The app automatically uses the default OBS port <strong>4455</strong> — you don’t need to change it.</li>
+        <li>In the <strong>OBS Controller</strong> app, enter only your computer’s <strong>IP address</strong>.</li>
+        <li>If your OBS server has a password, enter it when prompted.</li>
+        <li>Once connected, your <strong>scenes</strong> will appear as interactive cards.</li>
+      </ol>
+      <p>💡 <strong>Tip:</strong> Your phone and computer must be on the <strong>same Wi-Fi network</strong>.</p>
+    </div>
+
+    <!-- 🇪🇸 Español -->
+    <div lang="es">
+      <h1>Instrucciones de Uso – OBS Controller</h1>
+      <p><strong>Última actualización:</strong> 3 de noviembre de 2025</p>
+      <ol>
+        <li>Abre <strong>OBS Studio</strong> en tu computadora (versión 5.0 o superior).</li>
+        <li>Activa <strong>OBS WebSocket</strong> en <em>Configuración → Servidor WebSocket → Habilitar Servidor WebSocket</em>.</li>
+        <li>La aplicación usa automáticamente el puerto predeterminado del OBS: <strong>4455</strong>.</li>
+        <li>En la app <strong>OBS Controller</strong>, ingresa solo la <strong>dirección IP</strong> de tu computadora.</li>
+        <li>Si tu servidor OBS tiene contraseña, introdúcela cuando se te solicite.</li>
+      </ol>
+      <p>💡 <strong>Consejo:</strong> El teléfono y la computadora deben estar en la <strong>misma red Wi-Fi</strong>.</p>
+    </div>
+
+    <!-- 🇫🇷 Français -->
+    <div lang="fr">
+      <h1>Instructions d’utilisation – OBS Controller</h1>
+      <p><strong>Dernière mise à jour :</strong> 3 novembre 2025</p>
+      <ol>
+        <li>Ouvrez <strong>OBS Studio</strong> sur votre ordinateur (version 5.0 ou plus récente).</li>
+        <li>Activez <strong>OBS WebSocket</strong> dans <em>Paramètres → Serveur WebSocket → Activer le serveur WebSocket</em>.</li>
+        <li>L’application utilise automatiquement le port par défaut <strong>4455</strong>.</li>
+        <li>Dans l’application <strong>OBS Controller</strong>, saisissez uniquement l’<strong>adresse IP</strong> de votre ordinateur.</li>
+      </ol>
+      <p>💡 <strong>Astuce :</strong> Le téléphone et l’ordinateur doivent être connectés au <strong>même réseau Wi-Fi</strong>.</p>
+    </div>
+
+    <!-- 🇩🇪 Deutsch -->
+    <div lang="de">
+      <h1>Gebrauchsanweisung – OBS Controller</h1>
+      <p><strong>Zuletzt aktualisiert:</strong> 3. November 2025</p>
+      <ol>
+        <li>Öffnen Sie <strong>OBS Studio</strong> auf Ihrem Computer (Version 5.0 oder höher).</li>
+        <li>Aktivieren Sie <strong>OBS WebSocket</strong> unter <em>Einstellungen → WebSocket-Server → Server aktivieren</em>.</li>
+        <li>Die App verwendet automatisch den Standardport <strong>4455</strong>.</li>
+        <li>Geben Sie in der App <strong>OBS Controller</strong> nur die <strong>IP-Adresse</strong> Ihres Computers ein.</li>
+      </ol>
+      <p>💡 <strong>Tipp:</strong> Telefon und Computer müssen im <strong>gleichen Wi-Fi-Netzwerk</strong> sein.</p>
+    </div>
+
+    <!-- 🇷🇺 Русский -->
+    <div lang="ru">
+      <h1>Инструкция по использованию – OBS Controller</h1>
+      <p><strong>Последнее обновление:</strong> 3 ноября 2025</p>
+      <ol>
+        <li>Откройте <strong>OBS Studio</strong> на вашем компьютере (версия 5.0 или выше).</li>
+        <li>Включите <strong>OBS WebSocket</strong> в <em>Настройки → WebSocket Server → Включить сервер</em>.</li>
+        <li>Приложение автоматически использует порт <strong>4455</strong>.</li>
+        <li>Введите только <strong>IP-адрес</strong> вашего компьютера в приложении.</li>
+      </ol>
+      <p>💡 <strong>Совет:</strong> Телефон и компьютер должны быть в <strong>одной Wi-Fi сети</strong>.</p>
+    </div>
+
+    <!-- 🇨🇳 中文 -->
+    <div lang="zh">
+      <h1>使用说明 – OBS Controller</h1>
+      <p><strong>最后更新：</strong>2025 年 11 月 3 日</p>
+      <ol>
+        <li>在电脑上打开 <strong>OBS Studio</strong>（5.0 或更高版本）。</li>
+        <li>在 <em>设置 → WebSocket 服务器 → 启用 WebSocket 服务器</em> 中启用 <strong>OBS WebSocket</strong>。</li>
+        <li>应用程序会自动使用默认端口 <strong>4455</strong>。</li>
+        <li>在 <strong>OBS Controller</strong> 应用中仅输入电脑的 <strong>IP 地址</strong>。</li>
+      </ol>
+      <p>💡 <strong>提示：</strong> 手机和电脑必须连接到同一个 <strong>Wi-Fi 网络</strong>。</p>
+    </div>
+
+    <!-- 🇯🇵 日本語 -->
+    <div lang="ja">
+      <h1>使用方法 – OBS Controller</h1>
+      <p><strong>最終更新日：</strong>2025年11月3日</p>
+      <ol>
+        <li>コンピューターで <strong>OBS Studio</strong>（バージョン5.0以上）を開きます。</li>
+        <li><em>設定 → WebSocketサーバー → サーバーを有効にする</em> で <strong>OBS WebSocket</strong> を有効にします。</li>
+        <li>アプリはデフォルトのポート <strong>4455</strong> を自動的に使用します。</li>
+        <li><strong>OBS Controller</strong> アプリでは、PCの <strong>IPアドレス</strong> のみを入力します。</li>
+      </ol>
+      <p>💡 <strong>ヒント：</strong> スマートフォンとPCは同じ <strong>Wi-Fiネットワーク</strong> に接続する必要があります。</p>
+    </div>
+
+    <!-- 🇮🇳 हिन्दी -->
+    <div lang="hi">
+      <h1>उपयोग निर्देश – OBS Controller</h1>
+      <p><strong>अंतिम अपडेट:</strong> 3 नवंबर 2025</p>
+      <ol>
+        <li>अपने कंप्यूटर पर <strong>OBS Studio</strong> खोलें (संस्करण 5.0 या उससे नया)।</li>
+        <li><em>Settings → WebSocket Server → Enable Server</em> में <strong>OBS WebSocket</strong> सक्षम करें।</li>
+        <li>ऐप स्वचालित रूप से डिफ़ॉल्ट पोर्ट <strong>4455</strong> का उपयोग करता है।</li>
+        <li>केवल अपने कंप्यूटर का <strong>IP पता</strong> दर्ज करें।</li>
+      </ol>
+      <p>💡 <strong>टिप:</strong> फ़ोन और कंप्यूटर एक ही <strong>Wi-Fi नेटवर्क</strong> पर होने चाहिए।</p>
+    </div>
+
+    <!-- 🇸🇦 العربية -->
+    <div lang="ar" dir="rtl">
+      <h1>تعليمات الاستخدام – OBS Controller</h1>
+      <p><strong>آخر تحديث:</strong> 3 نوفمبر 2025</p>
+      <ol>
+        <li>افتح <strong>OBS Studio</strong> على جهاز الكمبيوتر (الإصدار 5.0 أو أحدث).</li>
+        <li>قم بتمكين <strong>OBS WebSocket</strong> من <em>الإعدادات → خادم WebSocket → تمكين الخادم</em>.</li>
+        <li>يستخدم التطبيق المنفذ الافتراضي <strong>4455</strong> تلقائيًا.</li>
+        <li>أدخل فقط <strong>عنوان IP</strong> الخاص بجهاز الكمبيوتر.</li>
+      </ol>
+      <p>💡 <strong>نصيحة:</strong> يجب أن يكون الهاتف والكمبيوتر على نفس <strong>شبكة Wi-Fi</strong>.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 OBS Controller – Desenvolvido por Thyago Neves.
+  </footer>
+
+  <script>
+    function switchLang(code) {
+      document.querySelectorAll('[lang]').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('lang') === code);
+      });
+    }
+  </script>
 </body>
 </html>
