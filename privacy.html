@@ -1,101 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - OBS Controller</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #f7f8fa;
-            color: #333;
-        }
-        h1, h2 {
-            color: #222;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            margin: auto;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade - OBS Controller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: #f7f8fa;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+    }
+    .lang-selector button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0 5px;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 40px auto;
+    }
+    h1, h2 { color: #222; }
+    a { color: #007BFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 14px;
+      color: #777;
+    }
+    [lang] { display: none; }
+    [lang].active { display: block; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Política de Privacidade – OBS Controller</h1>
-        <p><strong>Última atualização:</strong> 3 de novembro de 2025</p>
+  <header>
+    <div class="lang-selector">
+      <button onclick="switchLang('pt')">🇧🇷</button>
+      <button onclick="switchLang('en')">🇺🇸</button>
+      <button onclick="switchLang('es')">🇪🇸</button>
+      <button onclick="switchLang('fr')">🇫🇷</button>
+      <button onclick="switchLang('de')">🇩🇪</button>
+      <button onclick="switchLang('ru')">🇷🇺</button>
+      <button onclick="switchLang('zh')">🇨🇳</button>
+      <button onclick="switchLang('ja')">🇯🇵</button>
+      <button onclick="switchLang('hi')">🇮🇳</button>
+      <button onclick="switchLang('ar')">🇸🇦</button>
+    </div>
+  </header>
 
-        <p>Esta Política de Privacidade descreve como o aplicativo <strong>OBS Controller</strong>, desenvolvido por <strong>Thyago Neves</strong>, coleta, utiliza e protege as informações dos usuários.</p>
+  <div class="container">
+    <!-- 🇧🇷 Português -->
+    <div lang="pt" class="active">
+      <h1>Política de Privacidade – OBS Controller</h1>
+      <p><strong>Última atualização:</strong> 3 de novembro de 2025</p>
 
-        <h2>1. Informações que coletamos</h2>
-        <p>O <strong>OBS Controller</strong> não coleta informações pessoais identificáveis dos usuários. O aplicativo pode, no entanto, acessar e processar:</p>
-        <ul>
-            <li>Informações técnicas (como tipo de dispositivo, sistema operacional e versão do app);</li>
-            <li>Conexões de rede locais, utilizadas exclusivamente para se conectar ao <strong>OBS Studio</strong> instalado no computador do usuário.</li>
-        </ul>
-        <p>Nenhum dado pessoal é armazenado, compartilhado ou transmitido para servidores externos.</p>
+      <p>Esta Política de Privacidade descreve como o aplicativo <strong>OBS Controller</strong>, desenvolvido por <strong>Thyago Neves</strong>, coleta, utiliza e protege as informações dos usuários.</p>
 
-        <h2>2. Uso das informações</h2>
-        <p>As informações técnicas e de conexão são utilizadas apenas para:</p>
-        <ul>
-            <li>Permitir a comunicação entre o app e o <strong>OBS Studio</strong> via rede local;</li>
-            <li>Garantir o funcionamento correto dos recursos de controle e pré-visualização de cenas.</li>
-        </ul>
-        <p>O aplicativo não vende nem compartilha dados com terceiros.</p>
+      <h2>1. Informações que coletamos</h2>
+      <p>O aplicativo não coleta informações pessoais identificáveis. Pode processar apenas:</p>
+      <ul>
+        <li>Informações técnicas (tipo de dispositivo, sistema operacional, versão do app);</li>
+        <li>Conexões de rede locais, usadas apenas para se conectar ao <strong>OBS Studio</strong>.</li>
+      </ul>
+      <p>Nenhum dado pessoal é armazenado ou compartilhado com terceiros.</p>
 
-        <h2>3. Compartilhamento de dados</h2>
-        <p>O <strong>OBS Controller</strong> não compartilha informações com terceiros. Nenhum dado do usuário é transmitido pela internet ou armazenado fora do dispositivo.</p>
+      <h2>2. Uso das informações</h2>
+      <p>As informações são utilizadas apenas para:</p>
+      <ul>
+        <li>Permitir comunicação entre o app e o OBS Studio via rede local;</li>
+        <li>Garantir o funcionamento correto dos controles e pré-visualização.</li>
+      </ul>
 
-        <h2>4. Segurança dos dados</h2>
-        <p>Embora o app não armazene dados pessoais, são aplicadas boas práticas de segurança para proteger a comunicação com o <strong>OBS Studio</strong>. O usuário é responsável por configurar e proteger adequadamente a conexão local e o servidor OBS WebSocket.</p>
+      <h2>3. Compartilhamento de dados</h2>
+      <p>O <strong>OBS Controller</strong> não compartilha informações com terceiros.</p>
 
-        <h2>5. Permissões do aplicativo</h2>
-        <p>O aplicativo pode solicitar permissões como:</p>
-        <ul>
-            <li>Acesso à rede local e à internet, necessário para comunicação com o <strong>OBS Studio</strong>.</li>
-        </ul>
-        <p>Essas permissões são usadas exclusivamente para a funcionalidade principal do app.</p>
+      <h2>4. Segurança</h2>
+      <p>Boas práticas de segurança são aplicadas, mas o usuário é responsável por proteger sua rede e o servidor OBS WebSocket.</p>
 
-        <h2>6. Alterações nesta política</h2>
-        <p>Esta Política de Privacidade pode ser atualizada periodicamente. Recomenda-se revisar esta página ocasionalmente para se manter informado sobre possíveis mudanças. A nova versão entrará em vigor assim que publicada.</p>
+      <h2>5. Permissões</h2>
+      <ul>
+        <li>Acesso à rede local, necessário para comunicação com o OBS Studio.</li>
+      </ul>
 
-        <h2>7. Contato</h2>
-        <p>Em caso de dúvidas sobre esta Política de Privacidade, entre em contato:</p>
-        <p><strong>Email:</strong> <a href="mailto:thyagoneves.dev@gmail.com">thyagoneves.dev@gmail.com</a></p>
+      <h2>6. Alterações</h2>
+      <p>Esta política pode ser atualizada periodicamente. Consulte esta página para ver as últimas alterações.</p>
 
-        <h2>8. Limitação de responsabilidade e suporte</h2>
-        <p>O aplicativo <strong>OBS Controller</strong> é fornecido “no estado em que se encontra”, sem garantias de qualquer tipo, expressas ou implícitas. Embora o desenvolvedor busque oferecer uma boa experiência, não há obrigação de manter suporte contínuo, implementar novas funcionalidades ou corrigir erros de forma imediata.</p>
+      <h2>7. Contato</h2>
+      <p><strong>Email:</strong> <a href="mailto:thyagoneves.dev@gmail.com">thyagoneves.dev@gmail.com</a></p>
 
-        <h2>9. Preço e Licença</h2>
-        <p>O aplicativo <strong>OBS Controller</strong> é oferecido como uma licença pessoal não transferível, mediante pagamento único no valor exibido na Google Play Store. O valor pode variar conforme a moeda local ou promoções ocasionais.</p>
+      <h2>8. Responsabilidade</h2>
+      <p>O app é fornecido “como está”, sem garantias de funcionamento contínuo.</p>
 
-        <h2>10. Pagamentos</h2>
-        <p>As compras realizadas no aplicativo são processadas de forma segura pela <strong>Google Play Store</strong>. O desenvolvedor não tem acesso direto a informações de pagamento como números de cartão ou dados bancários.</p>
+      <h2>9. Preço e Licença</h2>
+      <p>O app é licenciado para uso pessoal mediante pagamento único exibido na Google Play Store.</p>
 
-        <h2>11. Reembolsos</h2>
-        <p>Reembolsos são administrados conforme as <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Políticas de Reembolso da Google Play</a>. Para solicitar um reembolso, siga as instruções disponíveis no site oficial do Google Play.</p>
+      <h2>10. Pagamentos e Reembolsos</h2>
+      <p>As compras são processadas pela Google Play Store. Reembolsos seguem as <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">políticas do Google Play</a>.</p>
     </div>
 
-    <footer>
-        &copy; 2025 Thyago Neves. Todos os direitos reservados.
-    </footer>
+    <!-- 🇺🇸 English -->
+    <div lang="en">
+      <h1>Privacy Policy – OBS Controller</h1>
+      <p><strong>Last updated:</strong> November 3, 2025</p>
+
+      <p>This Privacy Policy explains how the <strong>OBS Controller</strong> app, developed by <strong>Thyago Neves</strong>, handles user data.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p>The app does not collect personal information. It may access:</p>
+      <ul>
+        <li>Technical info (device type, OS, app version);</li>
+        <li>Local network connections, only for communication with <strong>OBS Studio</strong>.</li>
+      </ul>
+
+      <h2>2. Use of Information</h2>
+      <ul>
+        <li>Enable communication between the app and OBS Studio;</li>
+        <li>Ensure correct control and preview functionality.</li>
+      </ul>
+
+      <h2>3. Data Sharing</h2>
+      <p>No information is shared with third parties.</p>
+
+      <h2>4. Security</h2>
+      <p>Best practices are applied, but users are responsible for securing their local network and OBS WebSocket.</p>
+
+      <h2>5. Permissions</h2>
+      <p>The app requires local network access to connect to OBS Studio.</p>
+
+      <h2>6. Updates</h2>
+      <p>This policy may be updated periodically. Check this page for the latest version.</p>
+
+      <h2>7. Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:thyagoneves.dev@gmail.com">thyagoneves.dev@gmail.com</a></p>
+
+      <h2>8. Responsibility</h2>
+      <p>The app is provided “as is”, without warranty of any kind.</p>
+
+      <h2>9. Price & License</h2>
+      <p>Licensed for personal use via a one-time purchase on Google Play Store.</p>
+
+      <h2>10. Payments & Refunds</h2>
+      <p>Payments are processed by Google Play. Refunds follow <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Google Play policies</a>.</p>
+    </div>
+
+    <!-- 🇪🇸 Español -->
+    <div lang="es">
+      <h1>Política de Privacidad – OBS Controller</h1>
+      <p><strong>Última actualización:</strong> 3 de noviembre de 2025</p>
+      <p>Esta política explica cómo la app maneja los datos del usuario.</p>
+      <ul>
+        <li>No se recopilan datos personales.</li>
+        <li>Solo se usa la red local para conectar con OBS Studio.</li>
+      </ul>
+      <p>Los pagos y reembolsos se gestionan según las <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">políticas de Google Play</a>.</p>
+    </div>
+
+    <!-- Outras línguas seguem o mesmo formato reduzido -->
+    <div lang="fr"><h1>Politique de Confidentialité – OBS Controller</h1><p>Dernière mise à jour : 3 novembre 2025.</p><p>Aucune donnée personnelle n’est collectée. L’app utilise uniquement la connexion locale pour communiquer avec OBS Studio.</p></div>
+    <div lang="de"><h1>Datenschutzrichtlinie – OBS Controller</h1><p>Letzte Aktualisierung: 3. November 2025.</p><p>Keine personenbezogenen Daten werden erfasst. Nur lokale Netzverbindungen zum OBS Studio werden verwendet.</p></div>
+    <div lang="ru"><h1>Политика конфиденциальности – OBS Controller</h1><p>Последнее обновление: 3 ноября 2025 г.</p><p>Приложение не собирает личные данные и использует только локальное соединение с OBS Studio.</p></div>
+    <div lang="zh"><h1>隐私政策 – OBS Controller</h1><p>最后更新：2025年11月3日。</p><p>应用不会收集个人数据，仅使用本地网络连接 OBS Studio。</p></div>
+    <div lang="ja"><h1>プライバシーポリシー – OBS Controller</h1><p>最終更新日：2025年11月3日。</p><p>個人情報は収集されず、ローカルネットワーク経由で OBS Studio に接続します。</p></div>
+    <div lang="hi"><h1>गोपनीयता नीति – OBS Controller</h1><p>अंतिम अद्यतन: 3 नवंबर 2025।</p><p>ऐप कोई व्यक्तिगत डेटा एकत्र नहीं करता और केवल OBS Studio से स्थानीय नेटवर्क के माध्यम से जुड़ता है।</p></div>
+    <div lang="ar" dir="rtl"><h1>سياسة الخصوصية – OBS Controller</h1><p>آخر تحديث: 3 نوفمبر 2025.</p><p>لا يتم جمع أي بيانات شخصية، ويُستخدم الاتصال المحلي فقط مع OBS Studio.</p></div>
+  </div>
+
+  <footer>
+    © 2025 OBS Controller – Desenvolvido por Thyago Neves.
+  </footer>
+
+  <script>
+    function switchLang(code) {
+      document.querySelectorAll('[lang]').forEach(el => {
+        el.classList.toggle('active', el.getAttribute('lang') === code);
+      });
+    }
+  </script>
 </body>
 </html>
